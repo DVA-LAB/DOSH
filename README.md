@@ -11,7 +11,7 @@
 
 ### 라이센스
 *데이터셋의 라이센스 정보를 작성해주세요*
-- 라이센스:
+- 라이센스: CC BY-NC-SA (Attribution-NonCommercial-ShareAlike)
 - 활용 범위:
 - 2차 저작물 가이드라인:
 
