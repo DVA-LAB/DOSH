@@ -1,26 +1,32 @@
 ENGLISH | [KOREAN](https://github.com/DVA-LAB/DVA_LAB-data/blob/main/README-KO.md)
 
-# Jeju Dolphin & Ship Detection Dataset
+# DOSH-dataset
+**DO**lphin & **SH**ip Dataset for Object Detection
 
-## Overview
-This dataset was created to detect Indo-Pacific bottlenose dolphins and ships in the waters around Jeju, using aerial and marine video footage. 
-Key features include data collected under various environmental conditions (weather, time of day, etc.), with annotations that consider changes in object size and shape.
+## 1. Overview
+This dataset was created to detect Indo-Pacific bottlenose dolphins and ships in the waters around Jeju, using aerial and marine video footage. It includes diverse scenes considering three aspects. 
 
-## Fellow Organization Information
+1. object movement
+2. visual background (weather, time of day)
+3. perspective of the camera
+
+Additionally, to account for the free movement of objects from an aerial perspective, the dataset has annotations labeled with OBB (Oriented Bounding Box).
+
+## 2. Fellow Organization Information
 This dataset was sourced by MARC, and the labeling was carried out by members of DVA LAB's 2nd cohort.
 
 - **Organization**: MARC (Marine Animal Research and Conservation)  
 - **Contact Person**: Miyeon Kim, Deputy Director  
 - **Email**: marckorea718@gmail.com  
 
-## License
+## 3. License
 - **License**: CC BY-NC-SA (Attribution-NonCommercial-ShareAlike)
 - **Usage Scope**: May be used for non-commercial research and educational purposes, with proper attribution required.
 - **Derivative Works Guidelines**: Any derivative works must be distributed under the same license, with clear documentation of modifications.
 
-## Dataset Specification
+## 4. Dataset Specification
 
-### Data Structure
+### 4.1. Data Structure
 This dataset consists of image data and corresponding annotation files, stored in the following directory structure:
 
 - **ROOT Directory**: `private_files_for_service/AI/object_detection`
@@ -31,16 +37,17 @@ This dataset consists of image data and corresponding annotation files, stored i
   - `test_1`
 - **Annotation Directories**:
   - Contains 10 bbox annotation files corresponding to the image splits.
-  - Annotation format: **CVAT 1.1 (XML format)**
+  - Annotation format: **[CVAT 1.1](https://docs.cvat.ai/docs/manual/advanced/xml_format/#version-11) (XML format)**
 
-### Data Statistics
+### 4.2. Data Statistics
+The characteristics and basic statistics of the images in this dataset are as follows.
 - **Total Dataset Size**: Approximately 50GB
 - **Number of Images**: 1,085
 - **Resolutions**: Mostly `3840×2160`, some `1920×1080`
 - **Label Types**: Dolphin, Ship, Jetski
 - **Collection Period**: January 2023 – December 2024
 
-### Object-wise Bbox Statistics
+#### Object-wise Bbox Statistics
 
 | Class   | bbox Count | bbox Per Image | Mean Size | Median Size | Min Size | Max Size |
 |---------|------------|----------------|------------|------------|-----------|-----------|
@@ -48,31 +55,33 @@ This dataset consists of image data and corresponding annotation files, stored i
 | Jetski  | 85         | 0.1            | 2,339      | 1,736      | 66        | 8,875     |
 | Ship    | 952        | 0.9            | 40,276     | 26,992     | 90        | 501,071   |
 
-### Bbox Size Distribution
+#### Bbox Size Distribution
 - **Jetski**: Objects are evenly distributed across various sizes.
 - **Dolphin, Ship**: Most objects are small, with a few extreme outliers.
 
-## Preprocessing Information
+## 5. Preprocessing Information
 
-### Data Cleaning Process
+### 5.1. Data Cleaning Process
 - **Duplicate Removal**: Filtering out repetitive frames.
 - **Image Quality Enhancement**: Brightness, contrast, and blurriness adjustments.
 - **Noise Reduction**: Eliminating motion blur and irrelevant data.
 
-### Labeling Method
+### 5.2. Labeling Method
 - **Annotations were created using CVAT 1.1**
-- **BBox Annotation**:
-  - Initially, Axis-Aligned Bounding Boxes (AABB) were used.
-  - Rotated bounding boxes (OBB) were later added for additional model experiments.
+- **BBox Annotation**:  
+  - OBB (Oriented Bounding Box) is defined by:  
+    - xtl (top-left x), ytl (top-left y), xbr (bottom-right x), ybr (bottom-right y), rotation.
+    - The rotation angle is measured counterclockwise in degrees, with 0 degrees aligned to the horizontal right direction.
+  - In our experiments on this dataset, OBB-based models showed better detection performance
 
-### Quality Validation
+### 5.3. Quality Validation
 - **Multi-stage verification process**:
   - **Stage 1**: Initial labeling following predefined guidelines.
   - **Stage 2**: Consistency check and review by a second annotator.
   - **Stage 3**: Model testing to identify misdetections and refine labels.
 
-## Access Information
-
+## 6. Access Information
+You can request access as instructed to download the dataset.
 ### Data Download
 - **Download Link**: (To be provided later)
 - **Access Request**: taylor.7@kakaoimpact.org
@@ -80,7 +89,7 @@ This dataset consists of image data and corresponding annotation files, stored i
   - Image data (`.png`)
   - Annotation data (`.xml` - CVAT 1.1)
 
-## Usage Example
+## 7. Usage Example
 
 ### Sample Code to Load Data
 ```python
@@ -141,7 +150,8 @@ cv2.destroyAllWindows()
 
 | Version | Date       | Description                   | Author   |
 |---------|-----------|------------------------------|---------|
-| 0.1     | 2024-02-18 | Initial dataset README.md setup | Seowoo Han |
+| 0.1     | 2025-02-18 | Initial dataset README.md setup | Seowoo Han |
+| 0.2     | 2025-02-23 | Added an explanation of the labeling method  | Minseong Cho |
 
 ## Contact Information
 - **Slack Channel**: `#99-lab-qna`
