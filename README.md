@@ -72,7 +72,7 @@ The characteristics and basic statistics of the images in this dataset are as fo
   - OBB (Oriented Bounding Box) is defined by:  
     - xtl (top-left x), ytl (top-left y), xbr (bottom-right x), ybr (bottom-right y), rotation.
     - The rotation angle is measured counterclockwise in degrees, with 0 degrees aligned to the horizontal right direction.
-  - In our experiments on this dataset, OBB-based models showed better detection performance
+  - In our experiments on this dataset, OBB-based models showed better detection performance than AABB(Axis-Aligned Bounding Box)-Based Models.
 
 ### 5.3. Quality Validation
 - **Multi-stage verification process**:
