@@ -1,6 +1,6 @@
 ENGLISH | [KOREAN](https://github.com/DVA-LAB/DVA_LAB-data/blob/main/README-KO.md)
 
-# DOSH-dataset
+# DOSH dataset
 **DO**lphin & **SH**ip Dataset for Object Detection
 
 ## 1. Overview
