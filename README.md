@@ -83,7 +83,7 @@ The characteristics and basic statistics of the images in this dataset are as fo
 ## 6. Access Information
 You can request access as instructed to download the dataset.
 ### Data Download
-- **Download Link**: (To be provided later)
+- **Download Link**: [DOSH Download](https://drive.google.com/drive/u/0/folders/1paj06J-G-hm_dqtR2Bhi__6BEyvqzJTe)
 - **Access Request**: taylor.7@kakaoimpact.org
 - **Data Format**:
   - Image data (`.png`)
