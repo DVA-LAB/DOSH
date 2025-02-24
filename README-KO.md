@@ -84,7 +84,7 @@ KOREAN | [ENGLISH](https://github.com/DVA-LAB/DVA_LAB-data/blob/main/README.md)
 아래 안내된 방법에 따라 접근 권한을 요청하여 데이터셋을 다운로드 받을 수 있습니다.
 
 ### 데이터 다운로드
-- **데이터 다운로드 링크**: (추후 제공)
+- **데이터 다운로드 링크**: [DOSH 다운로드](https://drive.google.com/drive/u/0/folders/1paj06J-G-hm_dqtR2Bhi__6BEyvqzJTe)
 - **접근 권한 요청 방법**: taylor.7@kakaoimpact.org
 - **데이터 제공 형식**:
   - 이미지 데이터 (`.png`)
