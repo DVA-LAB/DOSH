@@ -29,13 +29,15 @@ KOREAN | [ENGLISH](https://github.com/DVA-LAB/DVA_LAB-data/blob/main/README.md)
 ### 4.1. 데이터 구조
 이 데이터셋은 이미지 데이터 및 해당 이미지에 대한 어노테이션 파일로 구성되어 있으며, 데이터의 저장 경로는 다음과 같습니다.
 
-- **ROOT 디렉토리**: `private_files_for_service/AI/object_detection`
-- **데이터셋 경로**: `ROOT/dataset_2024/unpatched/`
-- **이미지 디렉토리**:
+- **ROOT 디렉토리**: `private_files_for_service/AI/DOSH`
+- **데이터셋 경로**:
+  - 이미지: `ROOT/images/`
+  - 어노테이션: `ROOT/annotations/`
+- **이미지 하위 디렉토리**:
   - `train_1 ~ train_7`
   - `val_1 ~ val_2`
   - `test_1`
-- **어노테이션 디렉토리**:
+- **어노테이션 아휘 디렉토리**:
   - 이미지 데이터와 동일한 스플릿을 가지는 10개의 bbox 어노테이션 파일 포함
   - 어노테이션 형식: **[CVAT 1.1](https://docs.cvat.ai/docs/manual/advanced/xml_format/#version-11) (XML 형식)**
 
