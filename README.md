@@ -29,13 +29,15 @@ This dataset was sourced by MARC, and the labeling was carried out by members of
 ### 4.1. Data Structure
 This dataset consists of image data and corresponding annotation files, stored in the following directory structure:
 
-- **ROOT Directory**: `private_files_for_service/AI/object_detection`
-- **Dataset Path**: `ROOT/dataset_2024/unpatched/`
-- **Image Directories**:
+- **ROOT Directory**: `private_files_for_service/AI/DOSH`
+- **Dataset Path**:
+  - images: `ROOT/images/`
+  - annotations: `ROOT/annotations/`
+- **Image Sub-Directories**:
   - `train_1 ~ train_7`
   - `val_1 ~ val_2`
   - `test_1`
-- **Annotation Directories**:
+- **Annotation Sub-Directories**:
   - Contains 10 bbox annotation files corresponding to the image splits.
   - Annotation format: **[CVAT 1.1](https://docs.cvat.ai/docs/manual/advanced/xml_format/#version-11) (XML format)**
 
